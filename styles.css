@@ -45,7 +45,7 @@ body {
     background-color: rgba(255, 255, 255, 1);
     border-radius: 29px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    display: flex;
+    display: flex; /*Use flexbox to arrange elements in a column layout */
     flex-direction: column;
     justify-content: center;
     gap: 10px; 
