@@ -533,6 +533,154 @@ body {
   }
   
    
+  experience-entry .position-title {
+
+    font-family: "Poppins", sans-serif;
+  
+    font-size: 24.2px;
+  
+    font-weight: 500;
+  
+    line-height: 150%;
+  
+    color: rgba(63,61,61,1);
+  
+    white-space: nowrap;
+  
    
+  
+  }
+  
+   
+  
+  .experience-entry .company-name {
+  
+    font-family: "Poppins", sans-serif;
+  
+    font-size: 19.26px;
+  
+    font-weight: 400;
+  
+    line-height: 150%;
+  
+    color: rgba(63,61,61,1);
+  
+  }
+  
+   
+  
+  .recent-badge {
+  
+    position: absolute;
+  
+    top: 20px;
+  
+    right: 20px;
+  
+    background: rgba(215, 98, 57, 1);
+  
+    color: white;
+  
+    font-size: 14px;
+  
+    font-weight: 600;
+  
+    padding: 4px 8px;
+  
+    border-radius: 142px;
+  
+    z-index: 1;
+  
+  }
+  
+  
+   
+  
+  .contact-section {
+  
+    margin: 20px 59px;
+  
+    background: rgba(215,98,57,1);
+  
+    border-radius: 29px;
+  
+    padding: 29px 40px;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: space-between;
+  
+    box-sizing: border-box;
+  
+  }
+  
+  
+  .contact-inner {
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: flex-start;
+  
+    gap: 12px;
+  
+  }
+  
+  
+  .contact-title {
+  
+    font-weight: 500;
+  
+    font-size: 33.88px;
+  
+    font-family: "Poppins", sans-serif;
+  
+    color: rgba(255, 255, 255, 1);
+  
+    margin-bottom: 20px;
+  
+    text-align: center;
+  
+    justify-content: flex-start;
+  
+    text-align: left;
+  
+  }
+  
+  
+  .contact-details {
+  
+    font-size: 24px;
+  
+    font-weight: 400;
+  
+    font-family: "Poppins", sans-serif;
+  
+    line-height: 150%;
+  
+    display: flex;
+  
+    gap: 20px;
+  
+    justify-content: flex-start;
+  
+    text-align: left;
+  
+    color: #ddd;
+  
+  }
+  
+   
+  
+  .contact-details a {
+  
+    color: white !important;
+  
+    text-decoration: none;
+  
+  }
   
    
