@@ -187,6 +187,87 @@ body {
     letter-spacing: 0;
   }
   
+
+  .projects-wrapper {
+    margin: 40px 63px;
+    background: white;
+    border-radius: 29px;
+    padding: 50px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .project-card.featured {
+    background-color: rgba(74,139,112,1);
+    color: white; 
+  }
+  
+  
+  .projects-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 33.88px;
+    font-weight: 500;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 50px;
+    color: rgba(0,0,1); 
+  }
+  
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 34px;
+    justify-items: center; 
+  }
+  
+  
+  .project-card {
+    background: rgba(231,240,236,1);
+    border-radius: 29.04px;
+    padding: 8px 25px 8px 25px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;  
+    width: 100%; 
+    max-width: 100%;
+    box-sizing: border-box; 
+  }
+  
+  .project-year-heart {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; 
+  }
+   
+  .project-heart {
+    width: 26.62px; 
+    color: rgba(215,98,57,1);
+    margin-left: 8px;
+  }
+  
+   
+  
+  .project-card:hover {
+    transform: translateY(-6px); 
+  }
+  
+  
+  .project-year-heart span:first-child {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24.2px;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 1);
+  }
+   
+  .project-card.featured .project-year-heart  span:first-child {
+    color: rgba(255,255,255,1);
+  }
   
    
    
