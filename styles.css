@@ -114,6 +114,34 @@ body {
     padding: 0 5px; /* Apply horizontal padding for spacing */
   }
   
+  .skills-group {
+    width: 509.09px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  
+  .skill-item span {
+    width: 150px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  
+  
+  .progress-bar {
+    flex: 1;
+    height: 26px;
+    border-radius: 7px;
+    overflow: hidden;
+  }
   
    
    
