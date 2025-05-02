@@ -142,5 +142,51 @@ body {
     overflow: hidden;
   }
   
+  progress {
+    width: 317px;
+    height: 27px;
+    background: #5d9c89;
+    border-radius: 7px;
+  }
+  
+  
+  .progress.js {
+    width: 70%;
+  }
+  
+  .progress.react {
+    width: 80%;
+  }
+  
+  .progress.node {
+    width: 40%; 
+  }
+  
+  .progress.htmlcss {
+    width: 85%;
+  }
+
+  .skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; 
+  }
+  
+  
+  .badge {
+    background: #e7f0ec;
+    border-radius: 96px;
+    padding: 10px 24px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    line-height: 150%;
+    letter-spacing: 0;
+  }
+  
+  
    
    
