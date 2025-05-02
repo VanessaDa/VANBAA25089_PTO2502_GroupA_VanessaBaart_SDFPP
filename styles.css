@@ -291,4 +291,54 @@ body {
     font-family: "Poppins", sans-serif; 
   }
    
+  .edu-tools-wrapper {
+    display: flex;
+    margin: 50px 59px; 
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: border-box; 
+    gap: 25px; 
+  }
+  
+  
+  .education-section {
+    flex: 0 0 72%;
+    background: #ffffff;
+    border-radius: 29px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+  }
+  
+  
+  .tools-wrapper {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 29px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    box-sizing: border-box;
+  }
+  
+  .tools-title{
+    font-size: 33.88px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 1,);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
    
