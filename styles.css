@@ -662,25 +662,59 @@ body {
     line-height: 150%;
   
     display: flex;
-  
     gap: 20px;
-  
     justify-content: flex-start;
-  
     text-align: left;
-  
     color: #ddd;
-  
   }
   
-   
   
   .contact-details a {
-  
     color: white !important;
-  
     text-decoration: none;
-  
   }
   
-   
+  @media (max-width: 640px) {
+
+    .top-row {
+  
+      display: flex;
+  
+      flex-direction: row;
+  
+      align-items: flex-start;
+  
+      gap: 6px;
+  
+      margin: 8px 0 0 0;
+  
+      padding: 0 24px;
+  
+      height: auto;
+  
+    }
+  
+    .profile-photo {
+  
+      width: 100%;
+  
+      height: 137px;
+  
+      max-width: 147px;
+  
+      border-radius: 12px;
+  
+      object-fit: cover;
+  
+    }
+  
+    .bio-block {
+      width: 163px;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      text-align: left;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 12px;
+      margin-bottom: 0;
+    }
