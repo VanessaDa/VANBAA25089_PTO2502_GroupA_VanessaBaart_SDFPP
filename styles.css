@@ -249,8 +249,6 @@ body {
     margin-left: 8px;
   }
   
-   
-  
   .project-card:hover {
     transform: translateY(-6px); 
   }
@@ -269,5 +267,28 @@ body {
     color: rgba(255,255,255,1);
   }
   
+  .project-name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24.2px; 
+    line-height: 150%; 
+    letter-spacing: 0;
+    text-align: left;
+  }
+  
+  .project-card p {
+    font-size: 19.36px;
+    line-height: 150%;
+    font-weight: 400; 
+    font-family: "Poppins", sans-serif;
+    margin: 10px 0; 
+  }
+  
+  .project-card p strong {
+    font-weight: 700;
+    font-size: 19.36px;
+    line-height: 0%;
+    font-family: "Poppins", sans-serif; 
+  }
    
    
