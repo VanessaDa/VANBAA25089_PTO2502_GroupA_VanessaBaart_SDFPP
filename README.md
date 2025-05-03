@@ -122,7 +122,7 @@ SDFPP-2025/
 1. Clone the repository:
 
 
-   git clone https://github.com/VanessaDa/SDFPP-2025.git
+   [git clone https://github.com/VanessaDa/SDFPP-2025.git](https://github.com/VanessaDa/VANBAA25089_PTO2502_GroupA_VanessaBaart_SDFPP.git)
 
  
 
