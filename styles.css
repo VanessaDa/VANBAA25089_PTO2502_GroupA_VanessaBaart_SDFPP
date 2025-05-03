@@ -1,10 +1,42 @@
+/* Defined root variables for typography and colors */
+:root {
+  /* Typography */
+  --font-primary: "Poppins", sans-serif;
+
+  --font-xs: 8px;/* Extra small font size */
+  --font-sm: 10px;
+  --font-base: 16px;
+  --font-md: 19.36px;
+  --font-lg: 22px;
+  --font-xl: 24.2px;
+  --font-xxl: 33.88px;
+  --font-hero: 36px;
+
+  --font-light: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+/* Colors */
+  --color-primary: #4a8b70;
+  --color-accent: #d76239;
+  --color-background: #ffffff;
+  --color-secondary-bg: #e7f0ec;
+  --color-dark: #000000;
+  --color-muted: rgba(92, 92, 92, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-grey: rgba(63, 61, 61, 1);
+  --color-border: rgba(0, 0, 0, 0.05);
+  --color-contact-bg: var(--color-accent);
+  --color-featured-project: var(--color-primary);
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+  overflow-x: hidden;
+  font-family: var(--font-primary);
+  scroll-behavior: smooth;
   height: 100%;
 }
 
@@ -15,17 +47,17 @@ body {
   padding: 12px 20px;
   box-sizing: border-box;
   background-image: url("images/background.png");
-  background-size: cover; /* Ensure the image covers the entire container */
+  background-size: cover; /* Ensures the background image covers the entire container */
   background-repeat: no-repeat;
   background-position: center;
 }
-
+/* Styles for the top row container */
 .top-row {
   height: 300px;
   border-radius: 29px;
   margin: 59px 30px 60px 80px;
-  display: flex;  /* Flexbox layout */
-  flex-direction: row; /* Arrange items in a horizontal row */
+  display: flex;/* Uses flexbox for layout */
+  flex-direction: row;
   align-items: stretch;
   gap: 20px;
 }
@@ -37,90 +69,86 @@ body {
 }
 
 .bio-block {
-  max-width: 100%;  /* Ensure the block doesn't exceed the container's width */
+  max-width: 100%; /* Ensure the block doesn't exceed the container's width */
   width: 900px;
   padding: 40px 54px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--color-white);
   border-radius: 29px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px var(--color-border);
   display: flex;
-  flex-direction: column; /* Arrange items in a vertical column */
+  flex-direction: column;/* Arrange child elements in a vertical column */
   justify-content: center;
-  gap: 10px; /* Space between child elements */
+  gap: 10px;
 }
 
 .name {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 36px;
+  font-family: var(--font-primary);
+  font-weight: var(--font-semibold);
+  font-size: var(--font-hero);
   line-height: 104%;
   margin: 0;
 }
 
 .bio {
-  width: 856px;
-  width: 100%; /* Ensure responsiveness */
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 22px; /* Font size for readability */
-  letter-spacing: 0%;
+  width: 100%;
+  font-family: var(--font-primary);
+  font-weight: var(--font-light);
+  font-size: var(--font-lg);
+  letter-spacing: 0;
   line-height: 151%;
-  color: rgba(92, 92, 92, 1);
+  color: var(--color-muted);
   margin: 0;
 }
-
 .cards-row {
   max-width: 1350px;
   margin: 0 auto;
   display: flex;
   gap: 45px;
-  justify-content: space-between;
+  justify-content: space-between;/* Distribute cards evenly with space between */
 }
-/* Style for individual proficiency cards.
-   Sets the size, background, and layout properties. */
+/* Styles for the proficiency card */
 .proficiency-card {
   width: 48%;
-  background-color: white;
+  background-color: var(--color-background);
   border-radius: 29.04px; /* Rounded corners */
   padding: 41px 28px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px var(--color-border);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  box-sizing: border-box;
+  gap: 10px; /* Space between child elements */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .skills-card {
   width: 48%;
-  background-color: white;
+  background-color: var(--color-background);
   border-radius: 29.04px;
   padding: 28px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px var(--color-border);
   display: flex;
   flex-direction: column;
 }
-/* Style for the proficiency scale.
-   Uses flexbox to evenly distribute items and sets typography properties. */
+
 .proficiency-scale {
   display: flex;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   width: 509px;
-  font-size: 24.2px;
-  font-weight: 500;
-  color: #000;
+  font-size: var(--font-xl);
+  font-weight: var(--font-medium);
+  color: var(--color-dark);
   padding: 0 5px;
 }
 
 .section-title {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 33.88px;
-  line-height: 150%;
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  font-size: var(--font-xxl);
+  line-height: 150%; /* Line height for readability */
   letter-spacing: 0;
   margin: 0;
 }
-
+/* Additional margin for section titles inside proficiency cards */
 .proficiency-card .section-title {
   margin-bottom: 16px;
 }
@@ -130,14 +158,13 @@ body {
   height: 179px;
   display: flex;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  font-size: var(--font-xl);
   line-height: 104%;
-  font-weight: 500;
-  font-size: 24.2px;
   margin-bottom: 0;
 }
-/* Style for the skills group container.
-   Arranges skill items in a vertical column with spacing. */
+/* Styles for the skills group */
 .skills-group {
   width: 509.09px;
   display: flex;
@@ -153,39 +180,29 @@ body {
 
 .skill-item span {
   width: 150px;
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: var(--font-medium);
+  font-size: var(--font-xl);
 }
-
+/* Styles for the progress bar container */
 .progress-bar {
   flex: 1;
   height: 26px;
   border-radius: 7px;
-  overflow: hidden;
+  overflow: hidden;  /* Hide overflow content */
 }
 
 .progress {
   width: 317px;
   height: 27px;
-  background: #5d9c89;
+  background: var(--color-primary);
   border-radius: 7px;
 }
 
-.progress.js {
-  width: 70%;
-}
-
-.progress.react {
-  width: 80%;
-}
-
-.progress.node {
-  width: 40%;
-}
-
-.progress.htmlcss {
-  width: 85%;
-}
+/* Specific widths for different progress indicators */
+.progress.js { width: 70%; }
+.progress.react { width: 80%; }
+.progress.node { width: 40%; }
+.progress.htmlcss { width: 85%; }
 
 .skills-badges {
   display: flex;
@@ -194,11 +211,12 @@ body {
   justify-content: flex-start;
 }
 
+/* Styles for individual badges */
 .badge {
-  background: #e7f0ec;
+  background: var(--color-secondary-bg);
   border-radius: 96px;
   padding: 10px 24px;
-  font-size: 24px;
+  font-size: var(--font-xl);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,35 +224,31 @@ body {
   line-height: 150%;
   letter-spacing: 0;
 }
-/* Wrapper for the projects section.
-   Adds spacing, background, and shadow for the container. */
 .projects-wrapper {
   margin: 40px 63px;
-  background: white;
+  background: var(--color-background);
   border-radius: 29px;
   padding: 50px 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px var(--color-border);
   position: relative;
   z-index: 10;
 }
-/* Style for featured project cards.
-   Sets a distinct background and text color. */
+
 .project-card.featured {
-  background-color: rgba(74, 139, 112, 1);
-  color: white;
+  background-color: var(--color-featured-project);
+  color: var(--color-white);
 }
 
 .projects-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 33.88px;
-  font-weight: 500;
+  font-family: var(--font-primary);
+  font-size: var(--font-xxl);
+  font-weight: var(--font-medium);
   line-height: 150%;
   text-align: center;
   margin-bottom: 50px;
-  color: rgba(0, 0, 1);
+  color: var(--color-dark);
 }
-/* Container for project cards.
-   Uses a grid layout to arrange cards. */
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -243,9 +257,9 @@ body {
 }
 
 .project-card {
-  background: rgba(231, 240, 236, 1);
+  background: var(--color-secondary-bg);
   border-radius: 29.04px;
-  padding: 8px 25px 8px 25px;
+  padding: 8px 25px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -254,65 +268,60 @@ body {
   box-sizing: border-box;
 }
 
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
 .project-year-heart {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
 }
-/* Style for the heart icon in project cards.
-   Sets size and color. */
+
+.project-year-heart span:first-child {
+  font-family: var(--font-primary);
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-xl);
+  font-weight: var(--font-medium);
+  color: var(--color-dark);
+}
+
+.project-card.featured .project-year-heart span:first-child {
+  color: var(--color-white);
+}
+
 .project-heart {
   width: 26.62px;
-  color: rgba(215, 98, 57, 1);
+  color: var(--color-accent);
   margin-left: 8px;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-}
-
-.project-year-heart span:first-child {
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: space-between;
-  font-size: 24.2px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 1);
-}
-/* Override for featured project cards.
-   Changes the year text color to white. */
-.project-card.featured .project-year-heart span:first-child {
-  color: rgba(255, 255, 255, 1);
-}
-
 .project-name {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 24.2px;
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  font-size: var(--font-xl);
   line-height: 150%;
   letter-spacing: 0;
   text-align: left;
 }
-/* Style for project descriptions.
-   Sets typography and spacing properties. */
+/* Styles for bold text in project descriptions */
 .project-card p {
-  font-size: 19.36px;
+  font-size: var(--font-md);
   line-height: 150%;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-weight: var(--font-light);
+  font-family: var(--font-primary);
   margin: 10px 0;
 }
-/* Style for bold text in project descriptions.
-   Sets font weight and size. */
-.project-card p strong {
-  font-weight: 700;
-  font-size: 19.36px;
-  line-height: 0%;
-  font-family: "Poppins", sans-serif;
-}
 
+.project-card p strong {
+  font-weight: var(--font-bold);
+  font-size: var(--font-md);
+  line-height: 0%;
+  font-family: var(--font-primary);
+}
 .edu-tools-wrapper {
   display: flex;
   margin: 50px 59px;
@@ -325,40 +334,13 @@ body {
 
 .education-section {
   flex: 0 0 72%;
-  background: #ffffff;
+  background: var(--color-background);
   border-radius: 29px;
   padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px var(--color-border);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.tools-wrapper {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  background: #ffffff;
-  border-radius: 29px;
-  padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  box-sizing: border-box;
-}
-
-.tools-title {
-  font-size: 33.88px;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: 0%;
-  color: rgba(0, 0, 1);
-  width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .education-container {
@@ -372,53 +354,51 @@ body {
   flex-direction: row;
   border-radius: 29px;
   padding: 30px;
-  display: flex;
   gap: 20px;
   align-items: flex-start;
   position: relative;
 }
 
 .education-entry-primary {
-  background: #4a8b70;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 .education-entry-secondary {
-  background: #e7f0ec;
-  color: black;
+  background: var(--color-secondary-bg);
+  color: var(--color-dark);
 }
 
 .education-entry-secondary .program-name,
 .education-entry-secondary .study-type {
-  font-family: "Poppins", sans-serif;
-  font-size: 19.36px !important;
+  font-family: var(--font-primary);
+  font-size: var(--font-md) !important;
   line-height: 150%;
   letter-spacing: 0;
-  color: rgba(63, 61, 61, 1);
-  font-weight: 400;
+  color: var(--color-grey);
+  font-weight: var(--font-light);
 }
 
 .institution-name {
-  font-size: 24.2px !important;
-  font-weight: 600 !important;
-  font-family: "Poppins", sans-serif;
-  white-space: nowrap;
+  font-size: var(--font-xl) !important;
+  font-weight: var(--font-semibold) !important;
+  font-family: var(--font-primary);
+  white-space: nowrap; /* Prevent text wrapping */
 }
-
+/* Override for institution name in primary entries */
 .education-entry-primary .institution-name {
-  font-weight: 600 !important;
-  color: white !important;
+  color: var(--color-white) !important;
 }
 
 .date {
-  font-size: 19.36;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-size: var(--font-md);
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
   line-height: 150%;
 }
 
 .entry-details {
-  flex: 1;
+  flex: 1;/* Allow the container to grow and fill available space */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -427,13 +407,39 @@ body {
 }
 
 .entry-description {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   flex: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 19.36px;
-  font-weight: 400;
+  font-size: var(--font-md);
+  font-weight: var(--font-light);
+}
+.tools-wrapper {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  background: var(--color-background);
+  border-radius: 29px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.tools-title {
+  font-size: var(--font-xxl);
+  font-weight: var(--font-medium);
+  font-family: var(--font-primary);
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0;
+  color: var(--color-dark);
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .tools-category {
@@ -449,17 +455,16 @@ body {
 }
 
 .tools-category-title {
-  background: #000000;
-  color: #fff;
+  background: var(--color-dark);
+  color: var(--color-white);
   padding: 4.84px 14.52px;
   text-align: center;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: var(--font-semibold);
   display: inline-block;
   border-radius: 142px;
   width: fit-content;
   height: auto;
-  padding: 4.84px 14.52px;
   margin-bottom: -30px;
   z-index: 1;
   position: relative;
@@ -483,7 +488,7 @@ body {
 
 .experience-section {
   margin: 50px 59px;
-  background: #fff;
+  background: var(--color-background);
   border-radius: 29px;
   padding: 50px 40px;
 }
@@ -496,7 +501,7 @@ body {
 }
 
 .experience-entry {
-  background: rgba(231, 240, 236, 1);
+  background: var(--color-secondary-bg);
   border-radius: 29px;
   padding: 30px;
   display: flex;
@@ -506,58 +511,55 @@ body {
 }
 
 .experience-entry-primary {
-  background: rgba(74, 139, 112, 1);
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 .experience-entry-primary .date,
 .experience-entry-primary .position-title,
 .experience-entry-primary .company-name,
 .experience-entry-primary .entry-description li {
-  color: white !important;
+  color: var(--color-white) !important;
 }
 
 .entry-details span,
 .entry-description li {
-  font-size: 19.36px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-size: var(--font-md);
+  font-family: var(--font-primary);
+  font-weight: var(--font-light);
 }
 
 .experience-entry .date {
-  font-family: "Poppins", sans-serif;
-  font-size: 19.36px;
-  font-weight: 500;
+  font-family: var(--font-primary);
+  font-size: var(--font-md);
+  font-weight: var(--font-medium);
   line-height: 150%;
 }
 
 .experience-entry .position-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 24.2px;
-  font-weight: 500;
+  font-family: var(--font-primary);
+  font-size: var(--font-xl);
+  font-weight: var(--font-medium);
   line-height: 150%;
-  color: rgba(63, 61, 61, 1);
-
+  color: var(--color-grey);
   white-space: nowrap;
 }
 
 .experience-entry .company-name {
-
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   font-size: 19.26px;
-  font-weight: 400;
+  font-weight: var(--font-light);
   line-height: 150%;
-  color: rgba(63, 61, 61, 1);
+  color: var(--color-grey);
 }
-
 .recent-badge {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(215, 98, 57, 1);
-  color: white;
+  background: var(--color-accent);
+  color: var(--color-white);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: var(--font-semibold);
   padding: 4px 8px;
   border-radius: 142px;
   z-index: 1;
@@ -565,7 +567,7 @@ body {
 
 .contact-section {
   margin: 20px 59px;
-  background: rgba(215, 98, 57, 1);
+  background: var(--color-contact-bg);
   border-radius: 29px;
   padding: 29px 40px;
   display: flex;
@@ -575,7 +577,6 @@ body {
 }
 
 .contact-inner {
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -583,21 +584,18 @@ body {
 }
 
 .contact-title {
-
-  font-weight: 500;
-  font-size: 33.88px;
-  font-family: "Poppins", sans-serif;
-  color: rgba(255, 255, 255, 1);
+  font-weight: var(--font-medium);
+  font-size: var(--font-xxl);
+  font-family: var(--font-primary);
+  color: var(--color-white);
   margin-bottom: 20px;
-  text-align: center;
-  justify-content: flex-start;
   text-align: left;
 }
 
 .contact-details {
-  font-size: 24px;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-size: var(--font-xl);
+  font-weight: var(--font-light);
+  font-family: var(--font-primary);
   line-height: 150%;
   display: flex;
   gap: 20px;
@@ -607,11 +605,10 @@ body {
 }
 
 .contact-details a {
-  color: white !important;
+  color: var(--color-white) !important;
   text-decoration: none;
 }
-/* Media query for screens with a maximum width of 1024px.
-   Adjusts styles for better responsiveness on smaller screens. */
+/* Responsive styles for screens with a maximum width of 1024px */
 @media (max-width: 1024px) {
   .top-row {
     display: flex;
@@ -637,7 +634,7 @@ body {
     justify-content: space-between;
     padding: 12px;
     text-align: left;
-    background: rgba(255, 255, 255, 1);
+    background: var(--color-white);
     border-radius: 12px;
     margin-bottom: 0;
   }
@@ -645,19 +642,19 @@ body {
   .name {
     width: 139px;
     height: 17px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: var(--font-base);
+    font-weight: var(--font-semibold);
     line-height: 104%;
     text-align: left;
   }
 
   .bio {
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
-    font-weight: 400;
+    font-family: var(--font-primary);
+    font-size: var(--font-sm);
+    font-weight: var(--font-light);
     letter-spacing: 0;
     line-height: 151%;
-    color: rgba(92, 92, 92, 1);
+    color: var(--color-muted);
     text-align: left;
     width: 139px;
     display: inline-block;
@@ -695,21 +692,20 @@ body {
   }
 
   .section-title {
-    font-size: 14px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
+    font-family: var(--font-primary);
     line-height: 150%;
     letter-spacing: 0;
     text-align: left;
-    color: rgba(0, 0, 0, 1);
+    color: var(--color-dark);
   }
-
   .skill-item span {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-primary);
     width: 54px;
     height: auto;
-    font-weight: 500;
-    font-size: 10px;
+    font-weight: var(--font-medium);
+    font-size: var(--font-sm);
     line-height: 104%;
     letter-spacing: 0;
     white-space: nowrap;
@@ -724,11 +720,11 @@ body {
   .proficiency-scale {
     width: 208px;
     height: 15px;
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
+    font-family: var(--font-primary);
+    font-size: var(--font-sm);
     line-height: 150%;
-    font-weight: 500;
-    color: rgba(0, 0, 1);
+    font-weight: var(--font-medium);
+    color: var(--color-dark);
   }
 
   .skill-item {
@@ -744,16 +740,16 @@ body {
 
   .progress {
     height: 11px;
-    background: rgba(74, 139, 112, 1);
+    background: var(--color-primary);
     border-radius: 3px;
   }
 
   .badge {
-    font-weight: 400px;
-    font-family: "Poppins", sans-serif;
+    font-weight: var(--font-light);
+    font-family: var(--font-primary);
     border-radius: 40px;
-    font-size: 10px;
-    padding: 4px 10px 4px 10px;
+    font-size: var(--font-sm);
+    padding: 4px 10px;
     align-items: center;
     justify-content: center;
   }
@@ -777,7 +773,7 @@ body {
 
   .projects-wrapper {
     max-width: 318px;
-    margin: 14px auto 14px auto;
+    margin: 14px auto;
     border-radius: 12px;
     position: relative;
     z-index: 10;
@@ -795,62 +791,61 @@ body {
   .project-card p {
     font-size: 9.69px;
     line-height: 150%;
-    font-weight: 400;
-    font-family: "Poppins", sans-serif;
+    font-weight: var(--font-light);
+    font-family: var(--font-primary);
     margin: 10px 0;
   }
 
   .project-card p strong {
-    font-weight: 700;
+    font-weight: var(--font-bold);
     font-size: 9.69px;
     line-height: 0%;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-primary);
   }
 
   .projects-title {
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
+    font-family: var(--font-primary);
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
     line-height: 150%;
     letter-spacing: 0%;
     margin-bottom: 4px;
-    color: rgba(0, 0, 0, 1);
+    color: var(--color-dark);
     text-align: left;
   }
 
   .project-name {
-    font-weight: 500;
+    font-weight: var(--font-medium);
     font-size: 12.11px;
     line-height: 150%;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-primary);
     justify-content: center;
     align-items: center;
   }
-
   .project-year-heart {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-primary);
     display: flex;
     justify-content: space-between;
-    align-items: cente;
+    align-items: center;
   }
 
   .project-heart {
     width: 13px !important;
     height: 13px !important;
-    font-size: 8px !important;
+    font-size: var(--font-xs) !important;
   }
 
   .project-year-heart span:first-child {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-primary);
     display: flex;
     justify-content: space-between;
     font-size: 12.11px;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 1);
+    font-weight: var(--font-medium);
+    color: var(--color-dark);
   }
 
   .project-card.featured .project-year-heart span:first-child {
-    color: rgba(255, 255, 255, 1);
+    color: var(--color-white);
   }
 
   .recent-badge {
@@ -859,10 +854,10 @@ body {
     right: 8px;
     width: 61px;
     height: 16px;
-    background: rgba(215, 98, 57, 1);
-    color: white;
-    font-size: 8px;
-    font-weight: 500;
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: var(--font-xs);
+    font-weight: var(--font-medium);
     padding: 2px 8px;
     display: flex;
     align-items: center;
@@ -888,6 +883,7 @@ body {
     margin: 0 auto;
     padding: 10px;
     border-radius: 10px;
+    background: var(--color-background);
     box-sizing: border-box;
   }
 
@@ -898,10 +894,10 @@ body {
   }
 
   .date {
-    font-size: 8px;
-    font-weight: 500;
+    font-size: var(--font-xs);
+    font-weight: var(--font-medium);
     margin-bottom: 4px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-primary);
     letter-spacing: 0%;
     line-height: 150%;
   }
@@ -911,34 +907,32 @@ body {
     flex-direction: row;
     border-radius: 12px;
     padding: 16px;
-    display: flex;
     gap: 10px;
     margin-bottom: 10px;
     position: relative;
     align-items: flex-start;
   }
-
   .education-entry-secondary .program-name,
   .education-entry-secondary .study-type {
-    font-family: "Poppins", sans-serif;
-    font-size: 10px !important;
+    font-family: var(--font-primary);
+    font-size: var(--font-sm) !important;
     line-height: 150%;
     letter-spacing: 0;
-    color: rgba(63, 61, 61, 1);
-    font-weight: 500;
+    color: var(--color-grey);
+    font-weight: var(--font-medium);
   }
 
   .education-entry-secondary .institution-name {
-    font-size: 10px !important;
-    font-weight: 500 !important;
-    font-family: "Poppins", sans-serif;
+    font-size: var(--font-sm) !important;
+    font-weight: var(--font-medium) !important;
+    font-family: var(--font-primary);
     white-space: nowrap;
-    color: black !important;
+    color: var(--color-dark) !important;
   }
 
   .entry-details {
-    font-size: 8px;
-    font-weight: 400;
+    font-size: var(--font-xs);
+    font-weight: var(--font-light);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -948,17 +942,17 @@ body {
 
   .program-name,
   .study-type {
-    font-size: 8px !important;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 1);
-    font-family: "Poppins", sans-serif;
+    font-size: var(--font-xs) !important;
+    font-weight: var(--font-light);
+    color: var(--color-white);
+    font-family: var(--font-primary);
     line-height: 1.5;
     white-space: nowrap !important;
   }
 
   .education-entry .institution-name {
-    font-size: 8px !important;
-    font-weight: 600;
+    font-size: var(--font-xs) !important;
+    font-weight: var(--font-semibold);
     line-height: 1.4;
     white-space: normal;
     word-break: break-word;
@@ -966,10 +960,10 @@ body {
   }
 
   .entry-description {
-    font-family: "Poppins", sans-serif;
-    font-size: 8px;
+    font-family: var(--font-primary);
+    font-size: var(--font-xs);
     line-height: 150%;
-    font-weight: 400;
+    font-weight: var(--font-light);
     flex: 3;
     display: flex;
     flex-direction: column;
@@ -985,8 +979,8 @@ body {
     padding: 12px;
     box-sizing: border-box;
     align-items: center;
-    padding: 12px;
     gap: 10px;
+    background: var(--color-background);
   }
 
   .tools-items {
@@ -995,7 +989,6 @@ body {
     border-radius: 12px;
     padding: 14px;
     display: flex;
-    align-items: center;
     align-items: stretch;
     gap: 10px;
     flex-wrap: nowrap;
@@ -1012,33 +1005,33 @@ body {
     width: 100%;
     max-width: 280px;
     position: relative;
+    background: var(--color-secondary-bg);
   }
 
   .tools-title {
-    font-size: 12px;
-    font-weight: 500;
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
     line-height: 150%;
     text-align: center;
     letter-spacing: 0%;
     width: 100%;
-    margin: 0;
+    margin: 0 0 8px 0;
     padding: 0;
     display: block;
-    margin-bottom: 8px;
   }
-
   .tools-category-title {
     position: absolute;
     top: -12px;
-    transform: 0;
-    font-size: 5px;
-    font-weight: 500;
+    font-size: var(--font-xs);
+    font-weight: var(--font-medium);
     border-radius: 12px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 10px;
     padding: 4px 12px;
+    margin-bottom: 10px;
     z-index: 1;
+    background: var(--color-dark);
+    color: var(--color-white);
   }
 
   .tools-icons {
@@ -1059,6 +1052,7 @@ body {
     margin: 16px 20px;
     border-radius: 12px;
     padding: 18px 20px;
+    background: var(--color-background);
     margin-top: 0;
   }
 
@@ -1080,11 +1074,26 @@ body {
     display: flex;
     gap: 10px;
     align-items: flex-start;
+    background: var(--color-secondary-bg);
+  }
+
+  .experience-entry-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .experience-entry-primary .date,
+  .experience-entry-primary .position-title,
+  .experience-entry-primary .company-name,
+  .experience-entry-primary .entry-description li {
+    color: var(--color-white) !important;
   }
 
   .entry-details span,
   .entry-description li {
-    font-size: 8px;
+    font-size: var(--font-xs);
+    font-family: var(--font-primary);
+    font-weight: var(--font-light);
   }
 
   .entry-details span {
@@ -1096,7 +1105,6 @@ body {
   .entry-details span:first-child {
     margin-bottom: 10px;
   }
-
   .institution-name,
   .program-name,
   .study-type {
@@ -1105,10 +1113,10 @@ body {
   }
 
   .position-title {
-    font-size: 12px !important;
-    font-weight: 600 !important;
+    font-size: var(--font-sm) !important;
+    font-weight: var(--font-semibold) !important;
     line-height: 1.4;
-    color: rgba(0, 0, 0, 1);
+    color: var(--color-dark);
     white-space: normal !important;
     word-break: break-word;
   }
@@ -1116,12 +1124,19 @@ body {
   .experience-entry .date,
   .experience-entry .position-title,
   .experience-entry .company-name {
-    font-size: 10px !important;
-    font-weight: 500;
+    font-size: var(--font-sm) !important;
+    font-weight: var(--font-medium);
     line-height: 1.4;
     word-break: break-word;
     white-space: normal !important;
     display: block;
+  }
+
+  .company-name {
+    font-size: var(--font-sm) !important;
+    font-weight: var(--font-light);
+    color: var(--color-grey);
+    font-family: var(--font-primary);
   }
 
   .contact-section {
@@ -1130,27 +1145,28 @@ body {
     margin: 6px auto;
     padding: 12px;
     border-radius: 12px;
-    padding: 12px;
     box-sizing: border-box;
+    background: var(--color-contact-bg);
   }
 
   .contact-title {
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
+    font-size: var(--font-sm);
+    font-family: var(--font-primary);
+    font-weight: var(--font-medium);
     line-height: 150%;
     letter-spacing: 0;
     text-align: left;
     margin-bottom: 8px;
+    color: var(--color-white);
   }
 
   .contact-details {
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
+    font-family: var(--font-primary);
+    font-size: var(--font-sm);
     line-height: 150%;
-    font-weight: 400;
+    font-weight: var(--font-light);
     align-items: center;
-    color: rgba(255, 255, 255, 1);
+    color: var(--color-white);
     display: flex;
     gap: 8px;
     justify-content: flex-start;
@@ -1159,7 +1175,7 @@ body {
   }
 
   .contact-details a {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
   }
 
