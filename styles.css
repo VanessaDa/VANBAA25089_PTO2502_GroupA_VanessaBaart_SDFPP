@@ -2,9 +2,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
   height: 100%;
 }
 
@@ -15,7 +15,7 @@ body {
   padding: 12px 20px;
   box-sizing: border-box;
   background-image: url("images/background.png");
-  background-size: cover;
+  background-size: cover; /* Ensure the image covers the entire container */
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -24,8 +24,8 @@ body {
   height: 300px;
   border-radius: 29px;
   margin: 59px 30px 60px 80px;
-  display: flex;
-  flex-direction: row;
+  display: flex;  /* Flexbox layout */
+  flex-direction: row; /* Arrange items in a horizontal row */
   align-items: stretch;
   gap: 20px;
 }
@@ -37,16 +37,16 @@ body {
 }
 
 .bio-block {
-  max-width: 100%;
+  max-width: 100%;  /* Ensure the block doesn't exceed the container's width */
   width: 900px;
   padding: 40px 54px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 29px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Arrange items in a vertical column */
   justify-content: center;
-  gap: 10px;
+  gap: 10px; /* Space between child elements */
 }
 
 .name {
@@ -59,10 +59,10 @@ body {
 
 .bio {
   width: 856px;
-  width: 100%;
+  width: 100%; /* Ensure responsiveness */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 22px; /* Font size for readability */
   letter-spacing: 0%;
   line-height: 151%;
   color: rgba(92, 92, 92, 1);
@@ -76,11 +76,12 @@ body {
   gap: 45px;
   justify-content: space-between;
 }
-
+/* Style for individual proficiency cards.
+   Sets the size, background, and layout properties. */
 .proficiency-card {
   width: 48%;
   background-color: white;
-  border-radius: 29.04px;
+  border-radius: 29.04px; /* Rounded corners */
   padding: 41px 28px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -98,7 +99,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+/* Style for the proficiency scale.
+   Uses flexbox to evenly distribute items and sets typography properties. */
 .proficiency-scale {
   display: flex;
   justify-content: space-between;
@@ -134,7 +136,8 @@ body {
   font-size: 24.2px;
   margin-bottom: 0;
 }
-
+/* Style for the skills group container.
+   Arranges skill items in a vertical column with spacing. */
 .skills-group {
   width: 509.09px;
   display: flex;
@@ -203,7 +206,8 @@ body {
   line-height: 150%;
   letter-spacing: 0;
 }
-
+/* Wrapper for the projects section.
+   Adds spacing, background, and shadow for the container. */
 .projects-wrapper {
   margin: 40px 63px;
   background: white;
@@ -213,7 +217,8 @@ body {
   position: relative;
   z-index: 10;
 }
-
+/* Style for featured project cards.
+   Sets a distinct background and text color. */
 .project-card.featured {
   background-color: rgba(74, 139, 112, 1);
   color: white;
@@ -228,7 +233,8 @@ body {
   margin-bottom: 50px;
   color: rgba(0, 0, 1);
 }
-
+/* Container for project cards.
+   Uses a grid layout to arrange cards. */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -255,7 +261,8 @@ body {
   align-items: center;
   margin-top: 10px;
 }
-
+/* Style for the heart icon in project cards.
+   Sets size and color. */
 .project-heart {
   width: 26.62px;
   color: rgba(215, 98, 57, 1);
@@ -274,7 +281,8 @@ body {
   font-weight: 500;
   color: rgba(0, 0, 0, 1);
 }
-
+/* Override for featured project cards.
+   Changes the year text color to white. */
 .project-card.featured .project-year-heart span:first-child {
   color: rgba(255, 255, 255, 1);
 }
@@ -287,7 +295,8 @@ body {
   letter-spacing: 0;
   text-align: left;
 }
-
+/* Style for project descriptions.
+   Sets typography and spacing properties. */
 .project-card p {
   font-size: 19.36px;
   line-height: 150%;
@@ -295,7 +304,8 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 10px 0;
 }
-
+/* Style for bold text in project descriptions.
+   Sets font weight and size. */
 .project-card p strong {
   font-weight: 700;
   font-size: 19.36px;
@@ -600,7 +610,8 @@ body {
   color: white !important;
   text-decoration: none;
 }
-
+/* Media query for screens with a maximum width of 1024px.
+   Adjusts styles for better responsiveness on smaller screens. */
 @media (max-width: 1024px) {
   .top-row {
     display: flex;
